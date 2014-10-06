@@ -146,7 +146,7 @@ func (feed *UprFeed) UprRequestStream(vb uint16, opaque uint32, flags uint32,
 		return fmt.Errorf("UprFeed for this host not found")
 	}
 
-	if err := singleFeed.uprFeed.UprRequestStream(vb, opaque, flags,
+	if err := singleFeed.uprFeed.UprRequestStream(vb, flags,
 		vuuid, startSequence, endSequence, snapStart, snapEnd); err != nil {
 		return err
 	}
